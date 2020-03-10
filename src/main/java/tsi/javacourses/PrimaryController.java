@@ -1,11 +1,9 @@
 package tsi.javacourses;
 
-import java.io.IOException;
-
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.scene.control.Spinner;
 import javafx.scene.control.TableView;
+
+import java.util.Random;
 
 public class PrimaryController {
 
@@ -15,6 +13,19 @@ public class PrimaryController {
     public Spinner<Integer> num3;
     public Spinner<Integer> num4;
     public TableView<Turn> turnsTable;
+    Random rand = new Random();
+
+    int a = rand.nextInt(10);
+    int b = rand.nextInt(10);
+    /*for ( ; ; ) {
+        if (b == a) {
+            b = rand.nextInt(10);
+        } else {
+            break;
+        }
+    }*/
+    int c = rand.nextInt(10);
+    int d = rand.nextInt(10);
 
     public void doTurn() {
         count++;
@@ -30,5 +41,6 @@ public class PrimaryController {
         turnsTable.getItems().add(0,turn);
 
         System.out.printf("TURN %d %d %d %d%n", n1, n2, n3, n4);
+        System.out.printf("%d %d %d %d%n", a, b, c, d);
     }
 }
